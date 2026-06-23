@@ -1,22 +1,8 @@
-# 안전바로 Netlify 설정
 [build]
   publish = "."
-  functions = "netlify/functions"
-
-[functions]
-  node_bundler = "esbuild"
+  functions = "."
 
 [[headers]]
   for = "/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
-
-[[headers]]
-  for = "/data/*"
-  [headers.values]
-    Cache-Control = "public, max-age=86400"   # CSV는 하루 캐시
-
-# 환경변수는 Netlify 대시보드에서 설정 (절대 여기에 쓰지 마세요!)
-# Site configuration > Environment variables:
-#   ANTHROPIC_API_KEY = sk-ant-...
-#   GEMINI_API_KEY    = AIzaSy...

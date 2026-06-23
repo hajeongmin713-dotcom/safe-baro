@@ -658,7 +658,7 @@ function autoLoadCSVs(){
   ];
   let loaded=0;
   files.forEach(({fn,key,map})=>{
-    Papa.parse('./data/'+fn,{download:true,header:true,skipEmptyLines:true,
+    Papa.parse('./'+fn,{download:true,header:true,skipEmptyLines:true,
       worker:false,
       complete:r=>{
         const out=[];
