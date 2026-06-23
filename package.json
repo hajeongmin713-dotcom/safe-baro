@@ -1,0 +1,9 @@
+{
+  "name": "safe-baro",
+  "version": "2.0.0",
+  "private": true,
+  "description": "안전바로(Safe-Baro) — 국민 재난안전 도우미",
+  "scripts": {
+    "dev": "netlify dev"
+  }
+}
